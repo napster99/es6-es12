@@ -132,6 +132,7 @@ function add([x, y]) {
 }
 add([1, 2]); // 3
 
+// 参数维度的默认值
 function move({ x = 0, y = 0 } = {}) {
   return [x, y];
 }
@@ -141,6 +142,7 @@ move({ x: 3 }); // [3, 0]
 move({}); // [0, 0]
 move(); // [0, 0]
 
+// 这种是为整个参数指定默认值，而不是各个参数的默认值
 function move({ x, y } = { x: 0, y: 0 }) {
   return [x, y];
 }
@@ -149,3 +151,6 @@ move({ x: 3, y: 8 }); // [3, 8]
 move({ x: 3 }); // [3, undefined]
 move({}); // [undefined, undefined]
 move(); // [0, 0]
+
+// 圆括号使用情况 napster
+
