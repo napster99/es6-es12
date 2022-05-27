@@ -1,0 +1,14 @@
+name: Greeting from Mona
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Say Hello
+      env:
+        MIDDLE_ACTION: Say Hello
+        MIDDLE_NAME: Github Actions
+      run: |
+        echo $MIDDLE_ACTION $MIDDLE_NAME.
