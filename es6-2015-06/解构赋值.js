@@ -52,7 +52,7 @@ function foo() {
 }
 
 let [x = f()] = [1];
-console.log(x); // 1 表达式是惰性求值
+console.log(x); // 1 表达式是惰性求值， 1为true时， f函数不会被运行
 
 // // 默认值可以引用解构里的其他变量
 let [x = 1, y = x] = []; // x=1, y=1
